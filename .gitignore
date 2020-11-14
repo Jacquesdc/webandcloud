@@ -1,3 +1,7 @@
 
 /target
+.settings/
+.theia/
+.classpath
+.project
 
