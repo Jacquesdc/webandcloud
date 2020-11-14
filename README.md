@@ -1,19 +1,22 @@
-#Start :
+<b>#Start :</b>
 
-sur le credible-mode-...
+<h3> => sur le credible-mode-290313.oa.r.appspot.com </h3>
 
-(lors du premier lancement faire :) 
-gcloud config set project credible-mode-290313
+<b>(lors du premier lancement faire la commande suivante : ) </b>
 
-mvn clean package
-mvn appengine:run 
+<p><blockquote>gcloud config set project credible-mode-290313</blockquote></p>
+
+<b>(puis à chaque up, faire : ) </b>
+
+<p><blockquote>mvn clean package</blockquote></p>
+<p><blockquote>mvn appengine:deploy</blockquote></p>
 
 
 
 
-sur le port 80 : 
-mvn clean package
-mvn appengine:run
+<h3>=> sur le "port 80 de Google" : </h3>
+<p><blockquote>mvn clean package</blockquote></p>
+<p><blockquote>mvn appengine:run</blockquote></p>
 
 
 # webandcloud
