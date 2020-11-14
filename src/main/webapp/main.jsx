@@ -18,8 +18,13 @@ class MyApp extends React.Component {
       .then(data => this.setState({  data : data.items }));
   }
   render() {
-    return <ul>{this.state.data.map(e => <li> {e.properties.name} {e.properties.score} </li>)}  </ul>;
-  }
+    return (
+        <div>
+            <h1>Hello World</h1>
+            <ul>{this.state.data.map(e => <li> {e.properties.name} {e.properties.score} </li>)}  </ul>);
+        </div>
+        )
+    }
 }
 
 ReactDOM.render(
