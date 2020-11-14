@@ -1,3 +1,21 @@
+#Start :
+
+sur le credible-mode-...
+
+(lors du premier lancement faire :) 
+gcloud config set project credible-mode-290313
+
+mvn clean package
+mvn appengine:run 
+
+
+
+
+sur le port 80 : 
+mvn clean package
+mvn appengine:run
+
+
 # webandcloud
 
 **Be sure your maven has access to the web**
