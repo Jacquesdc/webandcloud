@@ -20,6 +20,7 @@ sur le credible-mode-290313.oa.r.appspot.com
 
 ##  OpenAPI
 
+    mvn clean package && mvn endpoints-framework:openApiDocs && gcloud endpoints services deploy target/openapi-docs/openapi.json && mvn appengine:deploy
 Appelez l'outil Endpoints Frameworks à l'aide de cette commande 
 
     mvn endpoints-framework:openApiDocs
