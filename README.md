@@ -1,23 +1,52 @@
-<b>#Start :</b>
+## Start 
 
-<h3> => sur le credible-mode-290313.oa.r.appspot.com </h3>
+sur le credible-mode-290313.oa.r.appspot.com
 
-<b>(lors du premier lancement faire la commande suivante : ) </b>
+**(lors du premier lancement faire la commande suivante : )** 
 
-<p><blockquote>gcloud config set project credible-mode-290313</blockquote></p>
+    gcloud config set project credible-mode-290313
 
-<b>(puis à chaque up, faire : ) </b>
+**(puis à chaque up, faire : )**
 
-<p><blockquote>mvn clean package</blockquote></p>
-<p><blockquote>mvn appengine:deploy</blockquote></p>
-
-
+    mvn clean package
+    mvn appengine:deploy
 
 
-<h3>=> sur le "port 80 de Google" : </h3>
-<p><blockquote>mvn clean package</blockquote></p>
-<p><blockquote>mvn appengine:run</blockquote></p>
 
+
+### sur le "port 80 de Google"
+    mvn clean package
+    mvn appengine:run
+
+##  OpenAPI
+
+Appelez l'outil Endpoints Frameworks à l'aide de cette commande 
+
+    mvn endpoints-framework:openApiDocs
+
+Déployez le fichier de configuration OpenAPI généré précédemment
+
+    gcloud endpoints services deploy target/openapi-docs/openapi.json
+
+
+## Activer les services
+
+Pour assurer la gestion des API, Endpoints Frameworks a besoin des services suivants :
+
+    Nom	Titre
+    servicemanagement.googleapis.com	API Service Management
+    servicecontrol.googleapis.com	API Service Control
+    endpoints.googleapis.com	Google Cloud Endpoints
+
+Utilisez la commande suivante pour vérifier que les services nécessaires sont activés :
+
+    gcloud services list
+
+Si les services requis ne sont pas répertoriés, activez-les :
+
+    gcloud services enable servicemanagement.googleapis.com
+    gcloud services enable servicecontrol.googleapis.com
+    gcloud services enable endpoints.googleapis.com
 
 # webandcloud
 
